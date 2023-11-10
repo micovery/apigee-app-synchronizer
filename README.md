@@ -43,14 +43,14 @@ export KEYCLOAK_ADMIN_PASSWORD="SuperSecret123"
 
 ## Setup Keycloak Instance
 
-* Get the Keycloak URI
+* Get the Keycloak URL
 
     ```shell
-    export KEYCLOAK_URI="https://$(gcloud compute forwarding-rules describe keycloak-idp-instance-fwd-rule --global --format='value(IPAddress)').nip.io"
-    echo $KEYCLOAK_URI
+    export KEYCLOAK_URL="https://$(gcloud compute forwarding-rules describe keycloak-idp-instance-fwd-rule --global --format='value(IPAddress)').nip.io"
+    echo $KEYCLOAK_URL
     ```
 
-* Navigate to the Keycloak URI (above), then open the Admin Console and log in.
+* Navigate to the Keycloak URL (above), then open the Admin Console and log in.
 
 
 * Create a new `realm`, named **apigee**. This `realm` will contain the synchronized clients.
